@@ -31,7 +31,8 @@ pipeline {
     // }
    stage('deploy') {
       steps {
-        sh 'git branch'
+        sh 'git checkout develop'
+        sh 'git merge master'
       }
     }
   }
