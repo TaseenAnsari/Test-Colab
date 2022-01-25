@@ -24,9 +24,14 @@ pipeline {
       }
     }
     
-    stage('deploy') {
+    // stage('deploy') {
+    //   steps {
+    //     sh 'tar czf nanogram.tar.gz node_modules package-lock.json package.json app.js test routes public models controllers bin'
+    //   }
+    // }
+   stage('deploy') {
       steps {
-        sh 'tar czf nanogram.tar.gz node_modules package-lock.json package.json app.js test routes public models controllers bin'
+        sh 'git branch'
       }
     }
   }
