@@ -31,7 +31,7 @@ pipeline {
     // }
    stage('deploy') {
       steps {
-        sh 'git checkout prod'
+        sh 'git checkout develop'
         sh 'git merge master'
       }
     }
